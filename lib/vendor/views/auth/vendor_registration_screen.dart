@@ -2,6 +2,7 @@ import 'package:country_state_city_picker/country_state_city_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:vendor_app_only/vendor/controller/vendor_controller.dart';
 
@@ -188,7 +189,13 @@ class _VendorRegistrationScreenState extends State<VendorRegistrationScreen> {
         child: InkWell(
           onTap: () {
             if (_formKey.currentState!.validate()) {
-              print('true');
+              EasyLoading.show(status: 'Please wait');
+              _vendorController
+                  .vendorRegistrationForm(businessName, emailAddress,
+                      phoneNumber, countryValue, stateValue, cityValue, _image)
+                  .whenComplete(() {
+                EasyLoading.dismiss();
+              });
             } else {
               print('false');
             }
