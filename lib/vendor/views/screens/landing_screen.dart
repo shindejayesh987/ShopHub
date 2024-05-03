@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vendor_app_only/models/vendor_user_model.dart';
 import 'package:vendor_app_only/vendor/views/auth/vendor_registration_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/vendor_map_screen.dart';
+import 'package:vendor_app_only/vendor/views/screens/main_vendor_screen.dart';
 
 class LandingScreen extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -22,7 +22,9 @@ class LandingScreen extends StatelessWidget {
           }
 
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Text("Loading");
+            return Center(
+              child: CircularProgressIndicator(),
+            );
           }
 
           if (!snapshot.data!.exists) {
@@ -33,7 +35,7 @@ class LandingScreen extends StatelessWidget {
               snapshot.data!.data() as Map<String, dynamic>);
 
           if (vendorUserModel.approved == true) {
-            return VendorMapScreen();
+            return MainVendorScreen();
           }
           return Center(
             child: Column(
