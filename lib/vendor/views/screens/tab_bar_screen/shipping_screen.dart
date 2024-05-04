@@ -7,11 +7,16 @@ class ShippingScreen extends StatefulWidget {
   State<ShippingScreen> createState() => _ShippingScreenState();
 }
 
-class _ShippingScreenState extends State<ShippingScreen> {
+class _ShippingScreenState extends State<ShippingScreen>
+    with AutomaticKeepAliveClientMixin {
   bool? _chargeShipping = false;
 
   @override
+  bool get wantKeepAlive => true;
+
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
     final ProductProvider _productProvider =
         Provider.of<ProductProvider>(context);
     return Column(
@@ -31,6 +36,13 @@ class _ShippingScreenState extends State<ShippingScreen> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: TextFormField(
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return 'Enter Shipping Charge Fee';
+                } else {
+                  return null;
+                }
+              },
               onChanged: (value) {
                 _productProvider.getFormData(
                     shippingCharge: double.parse(value));
