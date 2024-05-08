@@ -4,6 +4,7 @@ import 'package:vendor_app_only/vendor/views/screens/earnings_screen.dart';
 import 'package:vendor_app_only/vendor/views/screens/edit_screen.dart';
 import 'package:vendor_app_only/vendor/views/screens/logout_screen.dart';
 import 'package:vendor_app_only/vendor/views/screens/upload_screen.dart';
+import 'package:vendor_app_only/vendor/views/screens/vendor_orders_screen.dart';
 
 class MainVendorScreen extends StatefulWidget {
   const MainVendorScreen({super.key});
@@ -17,7 +18,8 @@ class _MainVendorScreenState extends State<MainVendorScreen> {
 
   List<Widget> _pages = [
     EarningsScreen(),
-    EditProductScreen(),
+    //EditProductScreen(),
+    VendorOrderScreen(),
     UploadScreen(),
     LogoutScreen()
   ];
@@ -42,11 +44,17 @@ class _MainVendorScreenState extends State<MainVendorScreen> {
             ),
             label: 'Earnings',
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(
+          //     Icons.edit,
+          //   ),
+          //   label: 'Edit',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.edit,
+              Icons.shop,
             ),
-            label: 'Edit',
+            label: 'Orders',
           ),
           BottomNavigationBarItem(
             icon: Icon(
