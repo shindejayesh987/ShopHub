@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:vendor_app_only/vendor/views/screens/earnings_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/edit_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/logout_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/upload_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/vendor_orders_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/earnings_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/logout_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/upload_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/vendor_orders_screen.dart';
 
 class MainVendorScreen extends StatefulWidget {
   const MainVendorScreen({super.key});

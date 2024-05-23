@@ -3,12 +3,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:provider/provider.dart';
+import 'package:shop_hub_store/vendor/provider/product_provider.dart';
+import 'package:shop_hub_store/vendor/views/screens/tab_bar_screen/attribute_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/tab_bar_screen/general_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/tab_bar_screen/images_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/tab_bar_screen/shipping_screen.dart';
 import 'package:uuid/uuid.dart';
-import 'package:vendor_app_only/vendor/provider/product_provider.dart';
-import 'package:vendor_app_only/vendor/views/screens/tab_bar_screen/attributes_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/tab_bar_screen/general_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/tab_bar_screen/images_screen.dart';
-import 'package:vendor_app_only/vendor/views/screens/tab_bar_screen/shipping_screen.dart';
 
 class UploadScreen extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
