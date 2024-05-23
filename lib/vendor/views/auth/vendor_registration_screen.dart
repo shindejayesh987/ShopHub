@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:vendor_app_only/vendor/controller/vendor_controller.dart';
+import 'package:shop_hub_store/vendor/controller/vendor_controller.dart';
 
 class VendorRegistrationScreen extends StatefulWidget {
   @override
@@ -188,7 +188,9 @@ class _VendorRegistrationScreenState extends State<VendorRegistrationScreen> {
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
           onTap: () {
+            print("outside Save button");
             if (_formKey.currentState!.validate()) {
+              print("Inside Save button");
               EasyLoading.show(status: 'Please wait');
               _vendorController
                   .vendorRegistrationForm(businessName, emailAddress,
@@ -196,6 +198,7 @@ class _VendorRegistrationScreenState extends State<VendorRegistrationScreen> {
                   .whenComplete(() {
                 EasyLoading.dismiss();
               });
+              print("After input");
             } else {
               print('false');
             }

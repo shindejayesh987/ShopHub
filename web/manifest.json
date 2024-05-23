@@ -1,6 +1,6 @@
 {
-    "name": "vendor_app_only",
-    "short_name": "vendor_app_only",
+    "name": "shop_hub_store",
+    "short_name": "shop_hub_store",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

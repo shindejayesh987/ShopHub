@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:vendor_app_only/vendor/provider/product_provider.dart';
+import 'package:shop_hub_store/vendor/provider/product_provider.dart';
 
 class ShippingScreen extends StatefulWidget {
   @override

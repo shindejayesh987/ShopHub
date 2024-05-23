@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:vendor_app_only/vendor/views/screens/inner_screens/withdraw_earning_screen.dart';
+import 'package:shop_hub_store/vendor/views/screens/inner_screens/withdraw_earning_screen.dart';
 
 class EarningsScreen extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
